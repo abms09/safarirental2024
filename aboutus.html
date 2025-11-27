@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script/common.js"></script>
+</head>
+<body>
+ <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top nv">
+    <div class="container-fluid" >
+      <a class="navbar-brand bn" href="#">Safari</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="aboutus.html">About us</a>
+          </li>
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+              Services
+            </a>
+            <ul class="dropdown-menu dp" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="crockery.html">Crocket Rent</a></li>
+              <li><a class="dropdown-item" href="buffet_set.html">Buffet set Rent</a></li>
+              <li><a class="dropdown-item" href="serving-team.html">Serving Team</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a href="#" class="nav-link" onclick="myorder()">My orders</a>
+          </li>
+        </ul>
+       <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#" id="navuser"></a>
+        </li>
+        <li class="nav-item mx-2" id="nav-logout" style="display: none;">
+          <a class="nav-link" href="#" onclick="logout()">Logout</a>
+        </li>      
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- About and mission -->
+
+<div class="container-fluid bg-dark py-3">
+    <h1 class="text-center text-warning sc">About us</h1>
+</div>
+
+  <div class="container-fluid">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-6">
+                <div class="px-3">
+                    <h4 class="text-warning">Welcome to Safari Rentals</h4>
+                    <p style="text-align:justify;">At <b>Safari Rentals</b>, every event is a celebration and deserves to be styled, served, and savoured with simplicity and elegance. We offer high-quality buffet sets, crockery, and cutlery for your gatherings. Our professional serving team ensures seamless, courteous service throughout your event. You don’t have to worry about buying or storing tableware we handle it all. With flexible rental packages, you can choose just what you need. Every item we provide is clean, well-maintained, and ready for use. Our team is experienced, reliable, and passionate about hospitality. We ensure timely delivery, setup, and removal so your event runs smoothly.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="px-3">
+                    <h4 class="text-warning">Our Mission</h4>
+                    <p style="text-align:justify;">Our mission is to make event hosting stress-free, beautiful, and accessible. We support weddings, corporate gatherings, family celebrations, and themed parties. We offer tailored rental solutions so you don’t need to buy, store, or maintain anything. Our high-quality buffet sets, crockery, and cutlery bring style and functionality. We provide a trained serving team to handle service seamlessly. We deliver, set up, and dismantle you just enjoy the day. We focus on hygiene and presentation in all our rentals. We aim to offer flexible and affordable packages for every budget. Our service helps you host elegant events effortlessly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- why choode us -->
+
+  <section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h2 class="text-warning">Why Choose Us</h2>
+        <p>Here are the reasons why Safari Rentals should be your first choice for your event rental needs:</p>
+      </div>
+      <div class="col-md-6">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm cd">
+              <div class="card-body text-center">
+                <i class="fa fa-check-circle fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">High Quality Items</h5>
+                <p class="card-text">We provide clean, hygienic, and durable buffet sets, crockery, and cutlery.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm cd">
+              <div class="card-body text-center">
+                <i class="fa fa-user fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">Professional Serving Team</h5>
+                <p class="card-text">Our trained staff serves your guests seamlessly and politely.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm cd">
+              <div class="card-body text-center">
+                <i class="fa fa-truck fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">Reliable Delivery</h5>
+                <p class="card-text">Timely delivery, setup, and cleanup — we handle logistics so you don’t stress.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm cd">
+              <div class="card-body text-center">
+                <i class="fa fa-wallet fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">Affordable Packages</h5>
+                <p class="card-text">Flexible pricing to suit different event sizes and budgets.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- what we offer -->
+
+
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+        <h2 class="text-warning">What We Offer</h2>
+        <p>Our rental solutions are tailored to make your event beautiful and hassle-free:</p>
+        <a href="#" class="btn btn-warning mt-3" onclick="orderbutton()">Order Now</a>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card h-100 shadow-sm cd">
+              <div class="card-body text-center">
+                <i class="fa fa-plate fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">Buffet Sets</h5>
+                <p class="card-text">Chafing dishes, serving counters, and more to style your buffet layout.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm cd">
+              <div class="card-body text-center">
+                <i class="fa fa-cutlery fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">Crockery & Cutlery</h5>
+                <p class="card-text">Plates, bowls, glasses, forks, spoons — premium quality and well maintained.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm cd">
+              <div class="card-body text-center">
+                <i class="fa fa-users fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">Serving Team</h5>
+                <p class="card-text">Professional staff to serve, replenish, and clean during your event.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm cd">
+              <div class="card-body text-center">
+                <i class="fa fa-sync fa-2x text-warning mb-3"></i>
+                <h5 class="card-title">Setup & Teardown</h5>
+                <p class="card-text">We handle delivery, setup, and removal — so you don’t waste time.</p>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contactus -->
+
+<div class="container-fluid bg-dark text-light py-3">
+    <div class="row">
+      <div class="col-md-6 px-5">
+        <a class="navbar-brand br" href="#">Safari</a><br>
+        <i class="fa fa-instagram me-2" style="font-size:2rem; color:red;"></i><span>safarirental_2024</span><br>
+        <i class="fa fa-facebook-f me-3" style="font-size:2rem; color:blue;"></i><span>safarirental_services</span>
+      </div>
+      <div class="col-md-6 text-start text-md-end px-5 py-5">
+        <p class="mb-2">East Moolad, Naduvannur, Kozhikode, Kerala 673614</p>
+        <p class="mb-2">safarirental24@gmail.com</p>
+        <p class="mb-0">+91-8086826234, +91-6238626234</p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <small><i class="fa fa-copyright"></i> copyright Safari Rentals. All rights reserved.</small>
+    </div>
+  </div>
+<a href="#" class="sticky-order-btn btn border-warning btn-light text-warning" onclick="orderbutton()">
+  Order Now
+</a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" …></script>
+</body>
+</html>

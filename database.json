@@ -1,0 +1,158 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "White Plate",
+      "category": "Plate",
+      "image":"img/white_plate.jpg",
+      "description":""
+    },
+    {
+      "id": 2,
+      "name": "Black Plate",
+      "category": "Plate",
+      "image": "img/black_plate.jpg",
+      "description":""
+    },
+     {
+      "id":3,
+      "name": "Steel Glass",
+      "category": "Glass",
+      "image": "img/steel_glass.jpg",
+      "description":""
+    },
+      {
+      "id":4,
+      "name": "White Glass",
+      "category": "Glass",
+      "image":  "img/white_glass.jpg",
+      "description":""
+    },
+      {
+      "id":5,
+      "name": "Serving Bowl",
+      "category": "Bowl",
+      "image": "img/serving_bowl.jpg",
+      "description":""
+    },
+     {
+      "id":6,
+      "name": "Soup Bowl",
+      "category": "Bowl",
+      "image":"img/soup_bowl.jpg",
+      "description":""
+    },
+        {
+      "id":7,
+      "name": "Fruit Bowl",
+      "category": "Bowl",
+      "image":"img/fruit_bowl.jpg",
+      "description":""
+    },
+       {
+      "id":8,
+      "name": "Salad Bowl",
+      "category": "Bowl",
+      "image":"img/salad_bowl.jpg",
+      "description":""
+    },
+       {
+      "id":9,
+      "name": "Steel Jug",
+      "category": "Jug",
+      "image":"img/water_jug.1jpg.jpg",
+      "description":""
+    },
+        {
+      "id":10,
+      "name": "Steel Jug",
+      "category": "Jug",
+      "image":"img/water_JUG2.webp",
+      "description":""
+    },
+       {
+      "id":11,
+      "name": "Glass Jug",
+      "category": "Jug",
+      "image":"img/water_jug3.webp",
+      "description":""
+    },
+      {
+      "id":12,
+      "name": "Tea Jug",
+      "category": "Jug",
+      "image":"img/tea_pot.jpg",
+      "description":""
+    },
+       {
+      "id":13,
+      "name": "Oval Platter",
+      "category": "Platter",
+      "image": "img/oval_platter1.jpg",
+      "description":""
+    },
+       {
+      "id":14,
+      "name": "Oval Platter",
+      "category": "Platter",
+      "image": "img/oval_platter2.jpg",
+      "description":""
+    },
+       {
+      "id":15,
+      "name": "Rectangular Platter",
+      "category": "Platter",
+      "image": "img/rectangular_platter.jpg",
+      "description":""
+    },
+    {
+      "id":16,
+      "name": "Table Spoon",
+      "category": "Spoon",
+      "image": "img/table_spoon.jpg" ,
+      "description":""
+    },
+     {
+      "id":17,
+      "name": "Serving Spoon_1",
+      "category": "Spoon",
+      "image":"img/serving_spoon1.jpg",
+      "description":""
+    },
+     {
+      "id":18,
+      "name": "Serving Spoon_2",
+      "category": "Spoon",
+      "image":"img/serving_spoon2.webp",
+      "description":""
+    },
+     {
+      "id":19,
+      "name": "Salad Spoon",
+      "category": "Spoon",
+      "image":"img/serving_spoon3.avif",
+      "description":""
+    },
+     {
+      "id":20,
+      "name": "Serving Spoon_4",
+      "category": "Spoon",
+      "image":"img/serving_spoon4.webp",
+      "description":""
+    },
+     {
+      "id":21,
+      "name": "Table Fork",
+      "category": "Fork",
+      "image":"img/dessert_spoon.webp" ,
+      "description":""
+    },  {
+      "id":22,
+      "name": "Transperant Glass",
+      "category": "Glass",
+      "image":"img/glass.avif" ,
+      "description":""
+    }
+  ]
+}
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serving Team - Safari Rental</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script/common.js"></script>
+</head>
+<body>
+ <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top nv">
+    <div class="container-fluid" >
+      <a class="navbar-brand bn" href="#">Safari</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="aboutus.html">About us</a>
+          </li>
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+              Services
+            </a>
+            <ul class="dropdown-menu dp" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="crockery.html">Crocket Rent</a></li>
+              <li><a class="dropdown-item" href="buffet_set.html">Buffet set Rent</a></li>
+              <li><a class="dropdown-item" href="serving-team.html">Serving Team</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a href="#" class="nav-link" onclick="myorder()">My orders</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#" id="navuser"></a>
+        </li>
+        <li class="nav-item mx-2" id="nav-logout" style="display: none;">
+          <a class="nav-link" href="#" onclick="logout()">Logout</a>
+        </li>      
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero / Banner -->
+  <section class="py-5 text-center bg-light">
+    <div class="container">
+      <h1 class="display-4">Our Serving Team</h1>
+      <p class="lead">Professional. Polished. Personable.</p>
+      <img src="img/catering.jpg" alt="Serving Team" class="img-fluid rounded mt-4" style="max-height: 400px; object-fit: cover;">
+    </div>
+  </section>
+
+  <!-- About Team -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="sc">About Our Team</h2>
+        <p>At Safari Rental, our serving team is the heart of our service. Trained in event etiquette and equipped with years of experience, our staff ensures every guest is attended to with care and discretion. Whether it’s managing buffet lines, serving guests, or organizing cleanups, we conduct our work with professionalism and warmth.</p>
+      </div>
+      <div class="col-md-6">
+        <h2 class="sc">Why Choose Us?</h2>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-check text-warning me-2"></i>Trained & Uniformed Staff</li>
+          <li><i class="fa fa-check text-warning me-2"></i>High Hygiene Standards</li>
+          <li><i class="fa fa-check text-warning me-2"></i>Prompt & Courteous Service</li>
+          <li><i class="fa fa-check text-warning me-2"></i>Flexible Staffing for Events</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Provided -->
+  <section class="bg-warning py-5 sc">
+    <div class="container">
+      <h2 class="text-center mb-4">What We Do</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-lg h-100 cr">
+            <div class="card-body">
+              <h5 class="card-title">Setup & Layout</h5>
+              <p class="card-text">Our team expertly arranges buffet counters, table settings and serving stations to create a seamless flow for your guests.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-lg h-100 cr">
+            <div class="card-body">
+              <h5 class="card-title">Serving Guests</h5>
+              <p class="card-text">We serve food and drinks attentively, ensuring every guest feels taken care of.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-lg h-100 cr">
+            <div class="card-body">
+              <h5 class="card-title">Clean-up & Clearing</h5>
+              <p class="card-text">After the event, our team clears plates, maintains cleanliness, and ensures a tidy exit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="container py-5 sc">
+    <div class="row g-3">
+      <div class="col-md-4"><img src="img/serv1.avif" alt="Team 1" class="img-fluid rounded im"></div>
+      <div class="col-md-4"><img src="img/serv5.jpeg" alt="Team 2" class="img-fluid rounded im"></div>
+      <div class="col-md-4"><img src="img/serv6.jpeg" alt="Team 3" class="img-fluid rounded im"></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="bg-dark text-light py-5 sc">
+    <div class="container">
+      <h2 class="text-center mb-4">What Our Clients Say</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>"The serving team was absolutely incredible — professional and friendly. They made our event feel luxurious and smooth."</p>
+            <footer class="blockquote-footer text-light">– Royal Avenue Auditorium</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p>"They were punctual, polite, and handled everything. Our guests kept complimenting how well they were served."</p>
+            <footer class="blockquote-footer text-light">– Himaya convention center</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section class="py-5 text-center sc">
+    <div class="container">
+      <h2>Book Our Serving Team</h2>
+      <p>Want to hire our serving staff for your next event? Get in touch with us!</p>
+      <a href="#" class="btn btn-warning btn-lg" onclick="orderbutton()">Book Our Team</a>
+    </div>
+  </section>
+
+  <!-- Footer (reuse) -->
+  <div class="container-fluid bg-dark text-light py-3">
+    <div class="row">
+      <div class="col-md-6 px-5">
+        <a class="navbar-brand br" href="#">Safari</a><br>
+        <i class="fa fa-instagram me-2" style="font-size:2rem; color:red;"></i><span>safarirental_2024</span><br>
+        <i class="fa fa-facebook-f me-3" style="font-size:2rem; color:blue;"></i><span>safarirental_services</span>
+      </div>
+      <div class="col-md-6 text-start text-md-end px-5 py-5">
+        <p class="mb-2">East Moolad, Naduvannur, Kozhikode, Kerala 673614</p>
+        <p class="mb-2">safarirental24@gmail.com</p>
+        <p class="mb-0">+91-8086826234, +91-6238626234</p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <small><i class="fa fa-copyright"></i> copyright Safari Rentals. All rights reserved.</small>
+    </div>
+  </div>
+<a href="#" class="sticky-order-btn btn border-warning btn-light text-warning" onclick="orderbutton()">
+  Order Now
+</a>
+<script src="script/serving.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

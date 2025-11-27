@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script/common.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+     <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top nv">
+    <div class="container-fluid" >
+      <a class="navbar-brand bn" href="#">Safari</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="aboutus.html">About us</a>
+          </li>
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+              Services
+            </a>
+            <ul class="dropdown-menu dp" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#" onclick="crockexplore()">Crocket Rent</a></li>
+              <li><a class="dropdown-item" href="#" onclick="buffexplore()">Buffet set Rent</a></li>
+              <li><a class="dropdown-item" href="#" onclick="servexplore()">Serving Team</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a href="#" class="nav-link" onclick="myorder()">My orders</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#" id="navuser"></a>
+        </li>
+        <li class="nav-item mx-2" id="nav-logout" style="display: none;">
+          <a class="nav-link" href="#" onclick="logout()">Logout</a>
+        </li>      
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- oder page -->
+  <div class="container">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-7 shadow-lg p-5">
+    <h2 class="mb-4 text-center text-warning">Place Your Order</h2>
+
+   <form id="orderForm">
+  <div class="mb-3">
+    <label for="bookingDate" class="form-label">Booking Date</label>
+    <input type="date" class="form-control" id="bookingDate" name="bookingDate">
+  </div>
+
+  <div class="mb-3">
+    <label for="peopleCount" class="form-label">Number of People</label>
+    <input type="number" class="form-control" id="peopleCount" name="peopleCount"
+      min="0" value="0">
+      <div class="error" id="pcount"></div>
+  </div>
+
+  <div class="mb-3">
+    <label for="buffetType" class="form-label">Buffet Set Type</label>
+    <select class="form-select" id="buffetType" name="buffetType" required>
+      <option value="" selected disabled>Choose buffet type</option>
+      <option value="no">No need</option>
+      <option value="budget">Budget (₹ 3,000)</option>
+      <option value="standard">Standard (₹ 7,000)</option>
+      <option value="premium">Premium (₹ 10,000)</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="buffetSets" class="form-label">How Many Buffet Sets?</label>
+    <input type="number" class="form-control" id="buffetSets" name="buffetSets"
+      min="0" value="0">
+      <div class="error" id="bcount"></div>
+  </div>
+
+  <div class="mb-3">
+    <label for="servingMembers" class="form-label">Number of Serving Team Members (₹ 1,000 / member)</label>
+    <input type="number" class="form-control" id="servingMembers" name="servingMembers"
+      min="0" value="0">
+      <div class="error" id="scount"></div>
+  </div>
+
+  <div class="mb-3">
+    <h5>Crockery Items</h3>
+    <h6>₹ 4 per person for plates</h6>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="plate" id="crockPlate" name="crockery">
+      <label class="form-check-label" for="crockPlate">Plates</label>
+    </div><br>
+    <h6>₹ 2 per person flat for all other crockery items (not per item).</h6>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="glass" id="crockGlass" name="crockery">
+      <label class="form-check-label" for="crockGlass">Glass</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="bowl" id="crockBowl" name="crockery">
+      <label class="form-check-label" for="crockBowl">Bowl</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="jug" id="crockJug" name="crockery">
+      <label class="form-check-label" for="crockJug">Jug</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="platter" id="crockPlatter" name="crockery">
+      <label class="form-check-label" for="crockPlatter">Platter</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="spoon" id="crockSpoon" name="crockery">
+      <label class="form-check-label" for="crockSpoon">Spoon</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="fork" id="crockFork" name="crockery">
+      <label class="form-check-label" for="crockFork">Fork</label>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <strong>Total Cost:</strong> <span id="totalCost">₹ 0</span>
+  </div>
+
+  <button type="button" class="btn btn-primary" onclick="calculateOrder()">Calculate</button>
+  <button type="button" class="btn btn-success" onclick="orderplace()">Place Order</button>
+</form>
+</div>
+</div>
+</div>
+
+
+<!-- contact page -->
+<div class="container-fluid bg-dark text-light py-3 mt-5">
+    <div class="row">
+      <div class="col-md-6 px-5">
+        <a class="navbar-brand br" href="#">Safari</a><br>
+        <i class="fa fa-instagram me-2" style="font-size:2rem; color:red;"></i><span>safarirental_2024</span><br>
+        <i class="fa fa-facebook-f me-3" style="font-size:2rem; color:blue;"></i><span>safarirental_services</span>
+      </div>
+      <div class="col-md-6 text-start text-md-end px-5 py-5">
+        <p class="mb-2">East Moolad, Naduvannur, Kozhikode, Kerala 673614</p>
+        <p class="mb-2">safarirental24@gmail.com</p>
+        <p class="mb-0">+91-8086826234, +91-6238626234</p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <small><i class="fa fa-copyright"></i> copyright Safari Rentals. All rights reserved.</small>
+  </div>
+  </div>
+<script src="script/order.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+</body>
+</html>

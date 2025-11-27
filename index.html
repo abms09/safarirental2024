@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script/common.js"></script>
+  </head>
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning sticky-top nv">
+    <div class="container-fluid" >
+      <a class="navbar-brand bn" href="#">Safari</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="aboutus.html">About us</a>
+          </li>
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+              Services
+            </a>
+            <ul class="dropdown-menu dp" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="crockery.html">Crocket Rent</a></li>
+              <li><a class="dropdown-item" href="buffet_set.html">Buffet set Rent</a></li>
+              <li><a class="dropdown-item" href="serving-team.html">Serving Team</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a href="#" class="nav-link" onclick="myorder()">My orders</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item mx-2">
+          <a class="nav-link" href="#" id="navuser"></a>
+        </li>
+        <li class="nav-item mx-2" id="nav-logout" style="display: none;">
+          <a class="nav-link" href="#" onclick="logout()">Logout</a>
+        </li>      
+      </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- carousal -->
+   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./img/5703.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+        <h5 class="text-dark">Crockery Items</h5>
+        <p class="text-dark">Crockery includes plates, bowls, cups, saucers, and teapots used for serving and eating.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./img/luxury-plate-meal-vintage-celebration.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption ">
+        <h5 class="fs-5 fs-sm-6">Buffet Set Counter</h5>
+        <p>A buffet set counter offers a sleek, organized surface for displaying food in self-serve or served formats.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="./img/event.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption">
+        <h5>Event Management Team</h5>
+        <p>Trained, professional, and attuned to every guest’s needs.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<!-- Description -->
+<div class="container-fluid bg-dark text-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div>
+                    <img src="img/buffet-1.webp" alt=""class="py-5" width="450em" style="border-radius: 4.5rem;">
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <div class="px-5 ">
+                <h2 class="text-light">About us</h2><br>
+                <p class="text-align-justify">Welcome to <b>Safari Rental</b>, where every event is elevated with our premium crockery, elegant buffet setups, and professional serving team. We provide spotless, high-quality dishes, bowls, and glassware on rent to match your event’s style. Whether it’s a wedding, corporate gathering, or private celebration, our buffet counters and chafing dishes are arranged to impress. <br> <br>Our experienced staff handles everything — from layout to serving and cleanup — ensuring a smooth service flow. We pride ourselves on attention to hygiene, maintaining our crockery to the highest standards. Our rentals are fully customizable, so you can choose the exact pieces and setup you need. <br><br>We offer flexible packages, affordable pricing, and scalable solutions for small or large-scale functions. By combining elegant crockery with a dedicated team, we create an inviting and refined dining experience. At Safari Rental24, we don’t just rent equipment; we deliver a seamless service that enhances the joy of your special moments. Trust us to bring sophistication, reliability, and care to every event.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- cards -->
+<div class="container-fluid bg-warning">
+<div class="container">
+    <h1 class="text-center py-5 fs-2 fs-sm-5 sc">We provide</h1>
+    <div class="row pb-5">
+        <div class="col-md-4 p-3">
+            <div class="card shadow-lg cd">
+                <img src="img/buff-2.jpeg" class="card-img-top p-2" alt="...">
+                <div class="card-body p-5">
+                <h5 class="card-title  text-center">BUFFET SET COUNTER</h5>
+                 <p class="card-text" style="text-align:justify;">A buffet counter is a beautifully designed and practical station for presenting food at events, blending style and function into a central serving area. These counters are built to hold chafing dishes, platters, and decorative serving ware in a clean, organized layout, making the food accessible and attractive to guests.</p>
+                 <div class="text-center"><a class="btn btn-warning ps-4 pe-4" href="buffet_set.html">Explore</a></div>
+                </div>
+             </div>
+        </div>
+         <div class="col-md-4 py-3">
+            <div class="card shadow-lg cd">
+                <img src="img/crockery_slide.jpg" class="card-img-top p-2" alt="...">
+                <div class="card-body p-5">
+                <h5 class="card-title  text-center">CROCKERY ITEMS</h5>
+                 <p class="card-text"  style="text-align:justify;">Crockery refers to the elegant collection of plates, bowls, cups, and serving ware made from durable materials such as porcelain, bone china, stoneware, and earthenware. These items not only provide functionality for serving and dining but also elevate the presentation of any meal.</p>
+                <div class="text-center pt-4"><a href="crockery.html" class="btn btn-warning ps-4 pe-4">Explore</a></div>
+                </div>
+             </div>
+        </div>
+         <div class="col-md-4 py-3">
+            <div class="card shadow-lg cd">
+                <img src="img/serv22.jpg" class="card-img-top p-2" alt="...">
+                <div class="card-body p-5">
+                <h5 class="card-title text-center">SERVING TEAM</h5>
+                 <p class="card-text" style="text-align:justify;">Our serving team is the backbone of the event experience trained, professional, and attuned to every guest’s needs. They handle setup, smoothly managing buffet stations and table layouts with precision. During the event, they serve food and drinks promptly and courteously, ensuring guests feel well cared for.</p>
+                  <div class="text-center"><a class="btn btn-warning ps-4 pe-4" href="serving-team.html">Explore</a></div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!-- gallery -->
+
+<section class="gallery-container">
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h2 class="sc">Our Recent Buffet Setups & Serving Team</h2>
+      <p class="text-muted">A curated look at our work — crockery, food arrangements, and more.</p>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-12 col-md-4 gallery-img">
+          <img src="img/serv1.avif" alt="Buffet setup 1" class="img-fluid rounded">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-4 gallery-img">
+          <img src="img/serv22.jpg" alt="Crockery details" class="img-fluid rounded">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-4 gallery-img">
+          <img src="img/serv5.jpeg" alt="Serving team at work" class="img-fluid rounded">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-4 gallery-img">
+          <img src="img/buff-07.jpg" alt="Buffet setup 2" class="img-fluid rounded">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-4 gallery-img">
+          <img src="img/buff-3.jpeg" alt="Food presentation" class="img-fluid rounded-pill">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-4 gallery-img">
+          <img src="img/buff-44.jpg" alt="Crockery close-up" class="img-fluid rounded">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-4 gallery-img">
+          <img src="img/buff-5.jpg" alt="Buffet spread" class="img-fluid rounded">
+        </a>
+      </div>
+
+      <div class="col-6 col-md-4 gallery-img">
+          <img src="img/serv6.jpeg" alt="Serving team interaction" class="img-fluid rounded">
+        </a>
+      </div>
+
+      <div class="col-12 col-md-4 gallery-img">
+          <img src="img/serv7.jpeg" alt="Table arrangement" class="img-fluid rounded">
+        </a>
+      </div>
+    </div>
+  </div> 
+</section>
+
+
+<!-- contact page -->
+<div class="container-fluid bg-dark text-light py-3">
+    <div class="row">
+      <div class="col-md-6 px-5">
+        <a class="navbar-brand br" href="#">Safari</a><br>
+        <i class="fa fa-instagram me-2" style="font-size:2rem; color:red;"></i><span>safarirental_2024</span><br>
+        <i class="fa fa-facebook-f me-3" style="font-size:2rem; color:blue;"></i><span>safarirental_services</span>
+      </div>
+      <div class="col-md-6 text-start text-md-end px-5 py-5">
+        <p class="mb-2">East Moolad, Naduvannur, Kozhikode, Kerala 673614</p>
+        <p class="mb-2">safarirental24@gmail.com</p>
+        <p class="mb-0">+91-8086826234, +91-6238626234</p>
+      </div>
+    </div>
+    <div class="text-center mt-3">
+      <small><i class="fa fa-copyright"></i> copyright Safari Rentals. All rights reserved.</small>
+    </div>
+  </div>
+
+
+<a href="#" class="sticky-order-btn btn border-warning btn-light text-warning" onclick="orderbutton()">
+  Order Now
+</a>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" …></script>
+</body>
+</html>
