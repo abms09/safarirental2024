@@ -45,10 +45,18 @@ form.addEventListener('submit', function(e) {
     subErr.textContent = "Subject is required";
     valid = false;
   }
+   if (sub.length>5) {
+    subErr.textContent = "Minimum 5 letter required";
+    valid = false;
+  }
 
   const msg = messageInput.value.trim();
   if (!msg) {
     msgErr.textContent = "Message is required";
+    valid = false;
+  }
+  if(msg.length>10){
+    msgErr.textContent = "Minimum 10 letters required";
     valid = false;
   }
 
