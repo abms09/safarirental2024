@@ -107,7 +107,7 @@
             phoneError.style.color="red"
             return false;
         }
-        if(!/^\+?[1-9][0-9]{7,14}$/.test(phn)){
+        if(!/^[6-9][0-9]{9}$/.test(phn)){
             phoneError.textContent="Enter valid phone number"
             phoneError.style.color="red"
             return false;
