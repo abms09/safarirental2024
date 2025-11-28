@@ -20,7 +20,6 @@ const API = "http://localhost:3000/products";
                         <img src="${p.image}">
                         <div class="pro-body">
                             <h3>${p.name}</h3>
-                            <p>₹${p.price}</p>
                         </div>
                     </div>
                 `;
