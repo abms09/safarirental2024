@@ -1,65 +1,75 @@
+emailjs.init({ publicKey: "zW8TEeDk1mC5LWrsj" });
 
-  emailjs.init({
-    publicKey: "zW8TEeDk1mC5LWrsj"  
-  });
+const form = document.getElementById('contact-form');
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const subjectInput = document.getElementById('subject');
+const messageInput = document.getElementById('message');
 
+const nameErr = document.getElementById('nameErr');
+const emailErr = document.getElementById('emailErr');
+const subErr = document.getElementById('subErr');
+const msgErr = document.getElementById('msgErr');
 
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
 
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+  nameErr.textContent = "";
+  emailErr.textContent = "";
+  subErr.textContent = "";
+  msgErr.textContent = "";
 
-    const name=document.getElementById('name');
-    const email=document.getElementById('email');
-    const message=document.getElementById('message');
+  let valid = true;
 
-    const nameErr=document.getElementById('nameErr');
-    const emailErr=document.getElementById('emailErr');
-    const msgErr=document.getElementById('msgErr');
+  const nam = nameInput.value.trim();
+  if (!nam) {
+    nameErr.textContent = "Name is required";
+    valid = false;
+  } else if (!/^[A-Za-z\s]+$/.test(nam)) {
+    nameErr.textContent = "Only letters allowed";
+    valid = false;
+  }
 
-    nameErr.textContent  = "";
-    emailErr.textContent = "";
-    msgErr.textContent   = "";
+  const mail = emailInput.value.trim();
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!mail) {
+    emailErr.textContent = "Email is required";
+    valid = false;
+  } else if (!emailPattern.test(mail)) {
+    emailErr.textContent = "Enter valid email";
+    valid = false;
+  }
 
-    let valid = true;
+  const sub = subjectInput.value.trim();
+  if (!sub) {
+    subErr.textContent = "Subject is required";
+    valid = false;
+  }
 
-    if (name.value.trim() === "") {
-      nameErr.textContent = "Name is required";
-      valid = false;
-    }
+  const msg = messageInput.value.trim();
+  if (!msg) {
+    msgErr.textContent = "Message is required";
+    valid = false;
+  }
 
-    const mail = email.value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (mail === "") {
-      emailErr.textContent = "Email is required";
-      valid = false;
-    } else if (!emailPattern.test(mail)) {
-      emailErr.textContent = "Enter valid email";
-      valid = false;
-    }
+  if (!valid) {
+    return;
+  }
 
-    if (message.value.trim() === "") {
-      msgErr.textContent = "Message is required";
-      valid = false;
-    }
-
-    if (!valid) {
-      return;
-    }
-
-    //EmailJS
-    emailjs.sendForm("service_6txiqgd", "template_v4b7kke", this)
-      .then(() => {
-        Swal.fire({
+  emailjs.sendForm("service_6txiqgd", "template_v4b7kke", form)
+    .then(() => {
+      Swal.fire({
         title: "Sent successfully",
         icon: "success",
         draggable: true
-         });
-      })
-      .catch((err) => {
-          Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Something went wrong!",
-         });
       });
-  });
+      form.reset();
+    })
+    .catch((err) => {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!"
+      });
+    });
+});
