@@ -28,7 +28,6 @@
   }
 function myorder(){
   let users = JSON.parse(localStorage.getItem("loggedInUser"));
-  console.log("loggedInUser:", users);
   if (users) {
     window.location.href = "myorder.html";
   } else {
